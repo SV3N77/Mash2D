@@ -8,10 +8,12 @@ public class playerController : MonoBehaviour
     public float moveSpeed; // Move speed of helicopter
     public Camera camera; // Main camera
     private Rigidbody2D heliRigidbody2D; // Get the player controller
+    private GameObject soldier; // Gets the Soldier game object
     // Start is called before the first frame update
     void Start()
     {
         heliRigidbody2D = GetComponent<Rigidbody2D>(); // Gets heli's rigid body
+        soldier = GameObject.FindGameObjectWithTag("Soldier");
     }
     
     // Update is called once per frame
@@ -73,7 +75,7 @@ public class playerController : MonoBehaviour
         // Checks collision with tree, hospital and soldier
         if (col.gameObject.CompareTag("Tree"))
         {
-            SceneManager.LoadScene("GameScene"); // loads gameover scene
+            SceneManager.LoadScene("GameOverScene"); // loads gameover scene
         }
         else if (col.gameObject.CompareTag("Hospital"))
         {
@@ -81,7 +83,7 @@ public class playerController : MonoBehaviour
         }
         else if(col.gameObject.CompareTag("Soldier"))
         {
-            
+            Destroy(soldier);
         }
     }
 }
