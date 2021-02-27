@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class playerController : MonoBehaviour
     void Update()
     {
         checkOffScreen();
+        Reset();
     }
     
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -56,5 +58,30 @@ public class playerController : MonoBehaviour
             Mathf.Clamp(transform.position.x, cameraRect.xMin, cameraRect.xMax),
             Mathf.Clamp(transform.position.y, cameraRect.yMin, cameraRect.yMax)
         );
+    }
+    // reset
+    void Reset()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+    // Checks collisions with other objects
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        // Checks collision with tree, hospital and soldier
+        if (col.gameObject.CompareTag("Tree"))
+        {
+            SceneManager.LoadScene("GameScene"); // loads gameover scene
+        }
+        else if (col.gameObject.CompareTag("Hospital"))
+        {
+            
+        }
+        else if(col.gameObject.CompareTag("Soldier"))
+        {
+            
+        }
     }
 }

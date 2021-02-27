@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5dfef5c0-4b21-46a0-bfd3-9496ef145b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelicopterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelicopterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/playerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HelicopterMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/playerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ozmAHlLpGaNxfbSWNwjNlUAeOQ" />
@@ -68,6 +70,7 @@
       <workItem from="1614297655296" duration="16000" />
       <workItem from="1614297963270" duration="3623000" />
       <workItem from="1614338125207" duration="163000" />
+      <workItem from="1614386492039" duration="2827000" />
     </task>
     <servers />
   </component>
