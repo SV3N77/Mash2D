@@ -83,7 +83,7 @@ public class playerController : MonoBehaviour
         }
         else if(col.gameObject.CompareTag("Soldier"))
         {
-            Destroy(soldier);
+            Destroy(col.gameObject);
         }
     }
 }
