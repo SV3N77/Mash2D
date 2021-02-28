@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InHeli : MonoBehaviour
 {
-    private static int soldierInHeli;
+    private static int soldierInHeli = 0;
     Text Soldiercount;
     // Start is called before the first frame update
     void Start()

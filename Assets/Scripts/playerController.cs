@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkOffScreen();
+        CheckOffScreen();
     }
     
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     }
     
     //Creating clamp for moving off screen
-    void checkOffScreen()
+    void CheckOffScreen()
     {
         // Getting pixels of camera and creating a rectangle
         var bottomeLeft = camera.ScreenToWorldPoint(Vector2.zero);
@@ -66,8 +66,6 @@ public class PlayerController : MonoBehaviour
     // Checks collisions with other objects
     void OnCollisionEnter2D(Collision2D col)
     {
-        
-        
         // Checks collision with tree, hospital and soldier
         if (col.gameObject.CompareTag("Tree"))
         {
@@ -80,11 +78,11 @@ public class PlayerController : MonoBehaviour
         }
         else if(col.gameObject.CompareTag("Soldier") && counter < 3)
         {
-            InHeli.CountSoldier(counter);
             Destroy(col.gameObject); // destroys soldier
             counter++; // adds to the counter
-            
+            InHeli.CountSoldier(counter);
         }
         Debug.Log(counter);
     }
+    
 }
