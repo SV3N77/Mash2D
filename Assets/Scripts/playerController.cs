@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class playerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float moveSpeed; // Move speed of helicopter
     public Camera camera; // Main camera
     private Rigidbody2D heliRigidbody2D; // Get the player controller
     private GameObject soldier; // Gets the Soldier game object
+    private int counter = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +73,8 @@ public class playerController : MonoBehaviour
     // Checks collisions with other objects
     void OnCollisionEnter2D(Collision2D col)
     {
+        
+        Debug.Log(counter);
         // Checks collision with tree, hospital and soldier
         if (col.gameObject.CompareTag("Tree"))
         {
@@ -79,11 +82,14 @@ public class playerController : MonoBehaviour
         }
         else if (col.gameObject.CompareTag("Hospital"))
         {
-            
+            counter = 1;// Resets counter to pickup more soldiers
+            ScoreScript.scoreValue =+ counter; // Adds counter to scorevalue
         }
-        else if(col.gameObject.CompareTag("Soldier"))
+        else if(col.gameObject.CompareTag("Soldier") && counter <= 3)
         {
-            Destroy(col.gameObject);
+            Destroy(col.gameObject); // destroys soldier
+            counter++; // adds to the counter
         }
+        
     }
 }

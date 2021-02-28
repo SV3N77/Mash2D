@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dfef5c0-4b21-46a0-bfd3-9496ef145b2e" name="Default Changelist" comment="" />
+    <list default="true" id="5dfef5c0-4b21-46a0-bfd3-9496ef145b2e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +19,8 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/HelicopterMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/playerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScoreScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ozmAHlLpGaNxfbSWNwjNlUAeOQ" />
@@ -68,6 +75,8 @@
       <workItem from="1614386492039" duration="3236000" />
       <workItem from="1614393248135" duration="1318000" />
       <workItem from="1614412412223" duration="2000" />
+      <workItem from="1614475235763" duration="862000" />
+      <workItem from="1614476131735" duration="901000" />
     </task>
     <servers />
   </component>
@@ -76,6 +85,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
