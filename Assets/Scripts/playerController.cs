@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public Camera camera; // Main camera
     private Rigidbody2D heliRigidbody2D; // Get the player controller
     private GameObject soldier; // Gets the Soldier game object
-    private int counter = 1;
+    private int counter = 0; // initialise counter
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         checkOffScreen();
-        Reset();
     }
     
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -62,19 +62,12 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(transform.position.y, cameraRect.yMin, cameraRect.yMax)
         );
     }
-    // reset
-    void Reset()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
+
     // Checks collisions with other objects
     void OnCollisionEnter2D(Collision2D col)
     {
         
-        Debug.Log(counter);
+        
         // Checks collision with tree, hospital and soldier
         if (col.gameObject.CompareTag("Tree"))
         {
@@ -82,14 +75,16 @@ public class PlayerController : MonoBehaviour
         }
         else if (col.gameObject.CompareTag("Hospital"))
         {
-            counter = 1;// Resets counter to pickup more soldiers
-            ScoreScript.scoreValue =+ counter; // Adds counter to scorevalue
+            ScoreScript.AddScore(counter); // Adds counter to scorevalue
+            counter = 0;// Resets counter to pickup more soldiers
         }
-        else if(col.gameObject.CompareTag("Soldier") && counter <= 3)
+        else if(col.gameObject.CompareTag("Soldier") && counter < 3)
         {
+            InHeli.CountSoldier(counter);
             Destroy(col.gameObject); // destroys soldier
             counter++; // adds to the counter
+            
         }
-        
+        Debug.Log(counter);
     }
 }
