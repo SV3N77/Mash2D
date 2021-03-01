@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6420064186942425700}
   - component: {fileID: 3184522434643869901}
   - component: {fileID: 3171566379723669279}
+  - component: {fileID: 4119020645501382541}
   m_Layer: 0
   m_Name: helcopter
   m_TagString: Player
@@ -111,3 +112,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ba02238f7484f41901423307004e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Movespeed: 0
+--- !u!50 &4119020645501382541
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630142773276362357}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
