@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D heliRigidbody2D; // Get the player controller
     private GameObject soldier; // Gets the Soldier game object
     private int counter = 0; // initialise counter
+    private int maxCounter = 9; // max soldiers
     
     // Start is called before the first frame update
     void Start()
@@ -75,12 +76,17 @@ public class PlayerController : MonoBehaviour
         {
             ScoreScript.AddScore(counter); // Adds counter to scorevalue
             counter = 0;// Resets counter to pickup more soldiers
+            InHeli.soldierInHeli = 0;
         }
         else if(col.gameObject.CompareTag("Soldier") && counter < 3)
         {
             Destroy(col.gameObject); // destroys soldier
             counter++; // adds to the counter
             InHeli.CountSoldier(counter);
+        }
+        else if(ScoreScript.scoreValue == maxCounter)
+        {
+            SceneManager.LoadScene(2);
         }
         Debug.Log(counter);
     }
