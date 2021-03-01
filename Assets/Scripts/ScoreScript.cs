@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    public static int scoreValue = 0;
+    public static int scoreValue;
     Text Score;
     
     // Start is called before the first frame update
@@ -14,13 +14,9 @@ public class ScoreScript : MonoBehaviour
         Score = GetComponent<Text>();
     }
     // Update is called once per frame
-    public static void AddScore(int newScoreValue)
-    {
-        scoreValue =+ newScoreValue;
-    }
-    
     void Update()
     {
+        scoreValue = PlayerController.soldierRescued;
         Score.text = "Soldier's Rescued: " + scoreValue;
     }
 }

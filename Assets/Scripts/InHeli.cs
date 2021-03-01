@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class InHeli : MonoBehaviour
 {
-    public static int soldierInHeli = 0;
+    public static int soldierInHeli;
     Text Soldiercount;
     // Start is called before the first frame update
     void Start()
     {
         Soldiercount = GetComponent<Text>();
-    }
-    public static void CountSoldier(int InHeli)
-    {
-        soldierInHeli =+ InHeli;
     }
     // Update is called once per frame
     void Update()

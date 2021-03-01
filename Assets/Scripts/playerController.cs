@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.WSA.Input;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed; // Move speed of helicopter
     public Camera camera; // Main camera
     private Rigidbody2D heliRigidbody2D; // Get the player controller
-    private GameObject soldier; // Gets the Soldier game object
-    private int counter = 0; // initialise counter
-    private int maxCounter = 9; // max soldiers
+    private int soldierAmount; // initialise counter
+    public static int soldierRescued;
+    public AudioSource pickUpSound; // Sound for picking soldier
     
     // Start is called before the first frame update
     void Start()
     {
         heliRigidbody2D = GetComponent<Rigidbody2D>(); // Gets heli's rigid body
-        soldier = GameObject.FindGameObjectWithTag("Soldier");
     }
     
     // Update is called once per frame
     void Update()
     {
         CheckOffScreen();
+        victory();
     }
     
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -71,24 +72,33 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.CompareTag("Tree"))
         {
             SceneManager.LoadScene("GameOverScene"); // loads gameover scene
+            soldierAmount = 0;
+            soldierRescued = 0;
         }
-        else if (col.gameObject.CompareTag("Hospital"))
+        else if (col.gameObject.CompareTag("Hospital") && soldierAmount < 9)
         {
-            ScoreScript.AddScore(counter); // Adds counter to scorevalue
-            counter = 0;// Resets counter to pickup more soldiers
+            pickUpSound.Play();
+            soldierRescued += soldierAmount;
+            soldierAmount = 0;
             InHeli.soldierInHeli = 0;
         }
-        else if(col.gameObject.CompareTag("Soldier") && counter < 3)
+        else if(col.gameObject.CompareTag("Soldier") && soldierAmount < 3)
         {
             Destroy(col.gameObject); // destroys soldier
-            counter++; // adds to the counter
-            InHeli.CountSoldier(counter);
+            soldierAmount++; // adds to the counter
+            InHeli.soldierInHeli++;
         }
-        else if(ScoreScript.scoreValue == maxCounter)
+        Debug.Log(soldierAmount);
+    }
+    void victory()
+    {
+        if (soldierRescued == 9)
         {
             SceneManager.LoadScene(2);
+            soldierAmount = 0;
+            soldierRescued = 0;
         }
-        Debug.Log(counter);
     }
-    
+
 }
+
