@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.XR.WSA.Input;
 
-public class PlayerController : MonoBehaviour
+public class playerController : MonoBehaviour
 {
     public float moveSpeed; // Move speed of helicopter
     public Camera camera; // Main camera

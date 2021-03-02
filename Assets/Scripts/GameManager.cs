@@ -21,5 +21,10 @@ public class GameManager : MonoBehaviour
             ScoreScript.scoreValue = 0;
             InHeli.soldierInHeli = 0;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
