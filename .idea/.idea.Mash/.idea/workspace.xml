@@ -4,10 +4,9 @@
     <list default="true" id="5dfef5c0-4b21-46a0-bfd3-9496ef145b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mash/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InHeli.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InHeli.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/oof.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/oof.mp3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +30,11 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/HelicopterMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/playerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScoreScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InHeli.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/playerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScoreScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ozmAHlLpGaNxfbSWNwjNlUAeOQ" />
@@ -57,6 +56,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Mash\Mash.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Danny\Documents\Mash" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -98,6 +105,10 @@
       <workItem from="1614586960281" duration="206000" />
       <workItem from="1614589241698" duration="909000" />
       <workItem from="1614599525203" duration="1958000" />
+      <workItem from="1614642670044" duration="6000" />
+      <workItem from="1614642768853" duration="19000" />
+      <workItem from="1614642922609" duration="12000" />
+      <workItem from="1614643025336" duration="149000" />
     </task>
     <servers />
   </component>

@@ -16,7 +16,7 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreValue = PlayerController.soldierRescued;
+        scoreValue = playerController.soldierRescued;
         Score.text = "Soldier's Rescued: " + scoreValue;
     }
 }
